@@ -1,0 +1,21 @@
+{
+    "name": "kolodochka-dev/lathe",
+    "autoload": {
+        "psr-4": {
+            "KolodochkaDev\\Lathe\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kolodochka Alexey",
+            "email": "kolodochka.alesha@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "bin": [
+        "bin/lathe-compile"
+    ]
+}

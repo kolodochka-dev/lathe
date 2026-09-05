@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use KolodochkaDev\Lathe\Compiler;
+
+$source = $argv[1] ?? null;
+$target = $argv[2] ?? null;
+
+if (!$source || !$target) {
+    fwrite(STDERR, "Usage: lathe-compile <source_dir> <target_dir>\n");
+    fwrite(STDERR, "Example: ./vendor/bin/lathe-compile ./templates ./templates/compiled\n");
+    exit(1);
+}
+
+if (!is_dir($source)) {
+    fwrite(STDERR, "Error: Source directory not found: {$source}\n");
+    exit(1);
+}
+
+try {
+    $compiler = new Compiler($target, $source);
+    $compiler->compileDir();
+    
+    fwrite(STDOUT, "Compiled successfully!\n");
+    exit(0);
+} catch (Exception $e) {
+    fwrite(STDERR, "Compilation error: " . $e->getMessage() . "\n");
+    exit(1);
+}
