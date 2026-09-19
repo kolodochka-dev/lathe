@@ -24,5 +24,12 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kolodochka-dev/lathe' }
     ]
-  }
+  },
+  lang: 'ru-RU',
+  locales: {
+    root: {
+      label: 'Русский',
+      lang: 'ru-RU'
+    }
+  },
 })
