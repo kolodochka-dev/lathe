@@ -36,7 +36,7 @@ class Templator
         return $render();
     }
 
-    public function getHelpers(): array
+    private function getHelpers(): array
     {
         $self = $this;
 

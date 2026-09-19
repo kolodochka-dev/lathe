@@ -3,6 +3,7 @@
 namespace KolodochkaDev\Lathe\Traits;
 
 use Closure;
+use Countable;
 
 trait HasTemplator
 {
@@ -57,7 +58,7 @@ trait HasTemplator
         return implode($vals);
     }
 
-    public function count(array $input): int
+    public function count(array|Countable $input): int
     {
         return count($input);
     }
