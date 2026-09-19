@@ -4,12 +4,12 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Lathe",
   description: "Native PHP templating",
+  base: '/lathe/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // nav: [
     //   { text: 'Начало работы', link: '/index' },
     // ],
-    base: '/lathe/',
     sidebar: [
       {
         // text: 'Examples',
